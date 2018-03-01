@@ -1,0 +1,16 @@
+//count the number of rows and then use this value as a variable
+lastrow = Cells(Rows.Count, 1).End(xlUp).Row
+
+//count the number of columns with data and use this value as a variable
+lastColumn = Cells(1, ws.Columns.Count).End(xlToLeft).Column
+
+//run code on all worksheets
+dim sub ws as Worksheet
+For Each ws In Worksheets
+//code goes here, then
+Next ws
+//and remember to add ws. before each range or cells callout to ensure you are running that function only on the specified worksheet
+
+
+//insert a column
+Range("A1").EntireColumn.Insert
